@@ -1,0 +1,15 @@
+@mixin buttonSmall($backgroundColor: hsl(231, 69%, 60%)){
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: .5rem 30%;
+    @media(min-width: 481px){
+        border: none;
+        padding: 12.5px 1.2rem;
+        border-radius: 5px;
+        background-color: $backgroundColor;
+        color: white;
+        box-shadow: -1px 7px 5px -5px rgba(0,0,0,0.2);
+    }
+}

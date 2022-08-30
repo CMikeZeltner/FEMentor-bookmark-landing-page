@@ -40,3 +40,4 @@ const toggleMobileMenu = function(){
         document.getElementById('dropdown-social-media').id = 'dropdown-social-media-hidden'
     }
   }
+

@@ -168,16 +168,36 @@ ul a {
   display: none;
 }
 
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  #page-intro-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
 #pic-background-container {
   position: relative;
+  display: flex;
+  justify-content: center;
   margin-top: 2rem;
   width: 100%;
   z-index: -1;
+}
+@media (min-width: 769px) {
+  #pic-background-container {
+    flex: 1 1 0px;
+  }
 }
 
 #top-pic {
   position: relative;
   width: 100%;
+  max-width: 600px;
   background-color: transparent;
   z-index: -1;
 }
@@ -188,6 +208,7 @@ ul a {
   right: 0;
   background-color: hsl(231deg, 69%, 60%);
   margin-left: auto;
+  max-width: 600px;
   width: 80%;
   height: 80%;
   border-top-left-radius: 500px;
@@ -209,6 +230,13 @@ ul a {
 #product-intro p {
   text-align: center;
   margin-bottom: 2rem;
+  max-width: 75ch;
+}
+@media (min-width: 769px) {
+  #product-intro {
+    flex: 1 1 0px;
+    text-align: left;
+  }
 }
 
 #download-link-wrapper {
@@ -220,6 +248,7 @@ ul a {
 #download-link-wrapper a {
   margin-top: 1rem;
   text-decoration: none;
+  text-align: center;
   background-color: hsl(231deg, 69%, 60%);
   font-weight: 700;
   color: white;
@@ -231,6 +260,7 @@ ul a {
 }
 #download-link-wrapper a:last-of-type {
   text-decoration: none;
+  text-align: center;
   background-color: hsl(0deg, 0%, 93%);
   font-weight: 700;
   color: hsl(0deg, 0%, 33%);

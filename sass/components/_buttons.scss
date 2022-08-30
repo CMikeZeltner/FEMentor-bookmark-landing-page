@@ -16,6 +16,7 @@
 
 @mixin mobileButton($backgroundColor: hsl(231, 69%, 60%), $fontColor: white){
     text-decoration: none;
+    text-align: center;
     background-color: $backgroundColor;
     font-weight: 700;
     color: $fontColor;

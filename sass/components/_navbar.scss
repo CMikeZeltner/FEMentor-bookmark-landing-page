@@ -1,9 +1,6 @@
 @use './buttons' as *;
 
-body{
-    box-sizing: border-box;
-    background-color: white;
-}
+
 
 #header-initial{
     box-sizing: border-box;
@@ -40,7 +37,7 @@ body{
     flex-direction: column;
     padding: 1.5rem 1rem 0 1rem;
     top: 0px;
-    position: absolute;
+    position: sticky;
     width: 100%;
     height: 100vh;
     max-height: 100vh;

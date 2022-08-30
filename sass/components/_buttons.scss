@@ -13,3 +13,15 @@
         box-shadow: -1px 7px 5px -5px rgba(0,0,0,0.2);
     }
 }
+
+@mixin mobileButton($backgroundColor: hsl(231, 69%, 60%), $fontColor: white){
+    text-decoration: none;
+    background-color: $backgroundColor;
+    font-weight: 700;
+    color: $fontColor;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: -1px 7px 5px -5px rgba(0,0,0,0.2);
+    font-size: 14px;
+    min-width: 140px;
+}

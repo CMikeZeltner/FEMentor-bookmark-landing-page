@@ -2,8 +2,25 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+h1 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 32px;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 26px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
 p {
   color: hsl(229deg, 8%, 60%);
+  text-align: center;
+  margin: auto;
+  max-width: 75ch;
 }
 
 #header-initial {
@@ -20,6 +37,7 @@ p {
   top: 0;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: hsla(0deg, 100%, 100%, 0.8);
 }
 #header-initial nav {
   display: none;
@@ -168,6 +186,35 @@ ul a {
   display: none;
 }
 
+.button-wrapper {
+  display: block;
+  width: 100vw;
+  border-top: 1px solid hsl(229deg, 8%, 60%);
+  text-align: center;
+}
+.button-wrapper:last-of-type {
+  border-bottom: 1px solid hsl(229deg, 8%, 60%);
+}
+.button-wrapper p {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  padding: 1rem 1rem 1rem calc(1rem - 3px);
+  border-bottom: 3px solid transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.button-wrapper p:hover, .button-wrapper p:active {
+  border-bottom-color: hsl(0deg, 94%, 66%);
+}
+@media (min-width: 769px) {
+  .button-wrapper:last-of-type {
+    border-bottom: none;
+  }
+}
+
 body {
   max-width: 1100px;
   margin: 0 auto;
@@ -221,21 +268,16 @@ body {
   margin: 0 1rem;
   box-sizing: border-box;
 }
-#product-intro h1 {
-  font-weight: 700;
-  text-align: center;
-  font-size: 32px;
-  margin: 2rem 0;
-}
 #product-intro p {
-  text-align: center;
   margin-bottom: 2rem;
-  max-width: 75ch;
 }
 @media (min-width: 769px) {
   #product-intro {
     flex: 1 1 0px;
     text-align: left;
+  }
+  #product-intro p {
+    text-align: start;
   }
 }
 
@@ -269,4 +311,8 @@ body {
   box-shadow: -1px 7px 5px -5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   min-width: 140px;
+}
+
+#button-content {
+  margin-top: 2rem;
 }/*# sourceMappingURL=style.css.map */

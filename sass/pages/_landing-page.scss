@@ -73,6 +73,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 2rem;
 
     
     a{
@@ -89,6 +90,13 @@ body{
 
 #button-content{
     margin-top: 2rem;
+    cursor: pointer;
+
+    @media(min-width: 769px){
+        display: flex;
+        width: 60%;
+        margin: 2rem auto 0 auto;
+    }
 }
 
 

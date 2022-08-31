@@ -1,6 +1,7 @@
 .button-wrapper{
     display: block;
-    width: 100vw;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
     border-top: 1px solid hsl(229, 8%, 60%);
     text-align: center;
 
@@ -11,24 +12,27 @@
 
     p{
         font-family: 'Rubik', sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         background-color: transparent;
         border: none;
-        padding: 1rem 1rem 1rem calc(1rem - 3px);
+        padding: 1rem 0;
         border-bottom: 3px solid transparent;
         width: fit-content;
-    
-        
-        &:hover, &:active{
+    }
+
+    &:hover, &:active{
+        p{
+            color: black;
             border-bottom-color: hsl(0, 94%, 66%);
         }
-    
     }
+
 
 
 @media(min-width: 769px){
-    &:last-of-type{
-        border-bottom: none;
-    }
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+    border-top: none;
+    margin: 0;
+    
 }   
 }

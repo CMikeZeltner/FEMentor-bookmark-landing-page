@@ -1,0 +1,60 @@
+.pic-background-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    z-index: -1;
+    @media(min-width: 769px){
+        flex: 1 1 0px;
+    }
+}
+
+.top-pic{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background-color: transparent;
+   
+}
+
+.feature-pic{
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    max-height: 400px;
+    aspect-ratio: inherit;
+}
+
+.feature-text{
+    p{
+        margin: auto;
+    }
+}
+
+.top-pic-background{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: hsl(231, 69%, 60%);
+    margin-left: auto;
+    max-width: 600px;
+    width: 80%;
+    height: 80%;
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    z-index: -2;
+}
+
+@mixin blueBackground($height: 80%, $top: 50px){
+    position: absolute;
+    top: $top;
+    background-color: hsl(231, 69%, 60%);
+    max-width: 600px;
+    width: 80%;
+    height: $height;
+
+    z-index: -2;
+
+}

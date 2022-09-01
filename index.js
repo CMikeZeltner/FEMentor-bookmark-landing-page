@@ -41,3 +41,27 @@ const toggleMobileMenu = function(){
     }
   }
 
+  const featureSelectedToggler = function(numTab){
+      const tabs = document.querySelectorAll('.button-wrapper')
+      console.log(tabs)
+      
+      tabs.forEach((tab) => {
+          tab.classList.remove('selected')
+      })
+  
+      tabs[numTab].classList.add('selected')
+  
+      featurePicInfoToggler(numTab)
+    }
+
+  const featurePicInfoToggler = function (numTab){
+    const tabs = document.querySelectorAll('.picture-info')
+    
+    tabs.forEach((tab) => {
+        tab.classList.add('hidden')
+    })
+
+    tabs[numTab].classList.remove('hidden')
+  }
+
+

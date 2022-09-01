@@ -1,6 +1,5 @@
 .button-wrapper{
     display: block;
-    width: calc(100% - 4rem);
     margin: 0 2rem;
     border-top: 1px solid hsl(229, 8%, 60%);
     text-align: center;
@@ -18,6 +17,7 @@
         padding: 1rem 0;
         border-bottom: 3px solid transparent;
         width: fit-content;
+        margin: 0 auto;
     }
 
     &:hover, &:active{
@@ -33,6 +33,15 @@
     border-bottom: 1px solid hsl(229, 8%, 60%);
     border-top: none;
     margin: 0;
+    width: 33%;
     
 }   
 }
+
+.selected{
+    p{
+        border-bottom-color:hsl(0, 94%, 66%);
+    }
+}
+
+

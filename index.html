@@ -51,9 +51,9 @@
 
   <div id='page-intro-wrapper'>
 
-    <div id='pic-background-container'>
-      <img src="images/illustration-hero.svg" id='top-pic'>
-      <div id='top-pic-background'></div>
+    <div class='pic-background-container'>
+      <img src="images/illustration-hero.svg" class='top-pic'>
+      <div class='top-pic-background'></div>
     </div>
   
     <section id='product-intro'>
@@ -69,13 +69,53 @@
 
   </div>
 
-  <h2>Features</h2>
-  <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+  <div id='features-heading'>
+    <h2>Features</h2>
+    <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+  </div>
 
-  <section id='button-content'>
-    <a class='button-wrapper'><p>Simple Bookmarking</p></a>
-    <a class='button-wrapper'><p>Speedy Searching</p></a>
-    <a class='button-wrapper'><p>Easy Sharing</p></a>
+  <section id='feature-container'>
+    <div id='button-content'>
+      <a class='button-wrapper selected' onclick='featureSelectedToggler(0)'><p>Simple Bookmarking</p></a>
+      <a class='button-wrapper' onclick='featureSelectedToggler(1)'><p>Speedy Searching</p></a>
+      <a class='button-wrapper' onclick='featureSelectedToggler(2)'><p>Easy Sharing</p></a>
+    </div>
+
+    <div class='picture-info'>
+      <div class='pic-background-container'>
+        <img src="images/illustration-features-tab-1.svg" class='feature-pic'>
+        <div class='feature-pic-background'></div>
+      </div>
+      <div class='feature-text'>
+        <h2>Bookmark in one click</h2>
+        <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+      </div>
+
+    </div>
+
+    <div class='picture-info hidden'>
+      <div class='pic-background-container'>
+        <img src="images/illustration-features-tab-2.svg" class='feature-pic'>
+        <div class='feature-pic-background'></div>
+      </div>
+      <div class='feature-text'>
+        <h2>Intelligent search</h2>
+        <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+      </div>
+
+    </div>
+
+    <div class='picture-info hidden'>
+      <div class='pic-background-container'>
+        <img src="images/illustration-features-tab-3.svg" class='feature-pic'>
+        <div class='feature-pic-background'></div>
+      </div>
+      <div class='feature-text'>
+        <h2>Share your bookmarks</h2>
+        <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+      </div>
+
+    </div>
     
     
     

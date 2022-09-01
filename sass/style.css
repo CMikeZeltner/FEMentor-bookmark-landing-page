@@ -6,7 +6,12 @@ h1 {
   font-weight: 700;
   text-align: center;
   font-size: 32px;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+}
+@media (min-width: 769px) {
+  h1 {
+    text-align: start;
+  }
 }
 
 h2 {
@@ -19,8 +24,7 @@ h2 {
 p {
   color: hsl(229deg, 8%, 60%);
   text-align: center;
-  margin: auto;
-  max-width: 75ch;
+  max-width: 50ch;
 }
 
 #header-initial {
@@ -188,7 +192,6 @@ ul a {
 
 .button-wrapper {
   display: block;
-  width: calc(100% - 4rem);
   margin: 0 2rem;
   border-top: 1px solid hsl(229deg, 8%, 60%);
   text-align: center;
@@ -206,6 +209,7 @@ ul a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 0 auto;
 }
 .button-wrapper:hover p, .button-wrapper:active p {
   color: black;
@@ -216,7 +220,60 @@ ul a {
     border-bottom: 1px solid hsl(229deg, 8%, 60%);
     border-top: none;
     margin: 0;
+    width: 33%;
   }
+}
+
+.selected p {
+  border-bottom-color: hsl(0deg, 94%, 66%);
+}
+
+.pic-background-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  z-index: -1;
+}
+@media (min-width: 769px) {
+  .pic-background-container {
+    flex: 1 1 0px;
+  }
+}
+
+.top-pic {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background-color: transparent;
+}
+
+.feature-pic {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  max-height: 400px;
+  aspect-ratio: inherit;
+}
+
+.feature-text p {
+  margin: auto;
+}
+
+.top-pic-background {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: hsl(231deg, 69%, 60%);
+  margin-left: auto;
+  max-width: 600px;
+  width: 80%;
+  height: 80%;
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  z-index: -2;
 }
 
 body {
@@ -231,40 +288,17 @@ body {
   }
 }
 
-#pic-background-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  width: 100%;
-  z-index: -1;
-}
-@media (min-width: 769px) {
-  #pic-background-container {
-    flex: 1 1 0px;
-  }
-}
-
-#top-pic {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  background-color: transparent;
-  z-index: -1;
-}
-
-#top-pic-background {
+.top-pic-background {
   position: absolute;
   top: 50px;
-  right: 0;
   background-color: hsl(231deg, 69%, 60%);
-  margin-left: auto;
   max-width: 600px;
   width: 80%;
   height: 80%;
+  z-index: -2;
+  right: 0;
   border-top-left-radius: 500px;
   border-bottom-left-radius: 500px;
-  z-index: -2;
 }
 
 #product-intro {
@@ -327,5 +361,53 @@ body {
     display: flex;
     width: 60%;
     margin: 2rem auto 0 auto;
+  }
+}
+
+#features-heading p {
+  margin: auto;
+}
+
+.feature-pic-background {
+  position: absolute;
+  top: 50px;
+  background-color: hsl(231deg, 69%, 60%);
+  max-width: 600px;
+  width: 80%;
+  height: 95%;
+  z-index: -2;
+  left: 0;
+  border-top-right-radius: 500px;
+  border-bottom-right-radius: 500px;
+  flex: 1 1 0px;
+}
+
+.picture-info {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .picture-info {
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1 0px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.feature-text {
+  flex: 1 1 0px;
+}
+@media (min-width: 769px) {
+  .feature-text {
+    padding: 2rem;
+    max-width: 50ch;
+  }
+  .feature-text p, .feature-text h2 {
+    text-align: start;
   }
 }/*# sourceMappingURL=style.css.map */

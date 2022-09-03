@@ -25,10 +25,18 @@ h3{
     font-size: 20px;
 }
 
+h4{
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
 p{
     color: hsl(229, 8%, 60%);
     text-align: center;
+    margin: auto;
+    padding: 0 1rem;
     max-width: 50ch;
+    line-height: 1.5;
 }
 
 span{

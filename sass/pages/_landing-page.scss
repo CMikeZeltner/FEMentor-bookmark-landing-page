@@ -9,8 +9,10 @@ body{
 }
 
 #page-intro-wrapper{
+    margin-top: 3rem;
     @media(min-width: 769px){
         display: flex;
+        align-items: center;
         flex-direction: row-reverse;
     }
 }
@@ -30,7 +32,7 @@ body{
     box-sizing: border-box;
 
     p{
-        margin-bottom: 2rem;
+        margin: 0 0 2rem 0;
     }
 
 
@@ -106,28 +108,38 @@ body{
 
 .hidden{
     display: none;
+    max-height: 0px;
+    transition: max-height .3s;
+
 }
+
 
 .feature-text{
     flex: 1 1 0px;
+    p{
+        margin: 0 1rem;
+    }
     @media(min-width: 769px){
         padding: 2rem;
         max-width: 50ch;
         p, h2{
             text-align: start;
-            
         }
     }
 }
 
+
 #extension-wrapper{
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 5rem;
 }
 
 #extension-header{
     margin: 0 auto 1rem auto;
+    p{
+        margin: 0 1rem;
+    }
 
 }
 
@@ -200,6 +212,65 @@ body{
     }
 
 }
+
+
+#accordion-container{
+
+    margin: 2rem 1rem;
+
+    button{
+        margin: auto;
+    }
+}
+
+.accordion{
+    width: 100%;
+}
+
+.content-visible{
+    text-align: start; 
+    line-height: 1.5rem;
+    cursor: pointer;
+    padding: 1rem 0;
+    max-height: 300px;
+    transition: max-height .4s;
+
+}
+
+.content-hidden{
+    max-height: 0px;
+    overflow:hidden;
+
+}
+
+
+.accordion-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: none;
+    border-top: 1px solid hsl(0, 0%, 33%);
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+    padding: 1rem 0;
+    max-height: 500px;
+}
+
+.accordion-icon{
+    transform: rotate(0deg);
+    transition: transform .2s, stroke .2s ;
+    stroke: #5267DF;
+    
+}
+
+.open{
+    transform: rotate(180deg);
+    stroke: hsl(0, 94%, 66%);
+    transition: transform stroke .3s;
+}
+
 
 
 

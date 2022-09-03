@@ -26,10 +26,18 @@ h3 {
   font-size: 20px;
 }
 
+h4 {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
 p {
   color: hsl(229deg, 8%, 60%);
   text-align: center;
+  margin: auto;
+  padding: 0 1rem;
   max-width: 50ch;
+  line-height: 1.5;
 }
 
 span {
@@ -290,9 +298,13 @@ body {
   margin: 0 auto;
 }
 
+#page-intro-wrapper {
+  margin-top: 3rem;
+}
 @media (min-width: 769px) {
   #page-intro-wrapper {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
   }
 }
@@ -316,7 +328,7 @@ body {
   box-sizing: border-box;
 }
 #product-intro p {
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
 }
 @media (min-width: 769px) {
   #product-intro {
@@ -406,10 +418,15 @@ body {
 
 .hidden {
   display: none;
+  max-height: 0px;
+  transition: max-height 0.3s;
 }
 
 .feature-text {
   flex: 1 1 0px;
+}
+.feature-text p {
+  margin: 0 1rem;
 }
 @media (min-width: 769px) {
   .feature-text {
@@ -424,10 +441,14 @@ body {
 #extension-wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
 }
 
 #extension-header {
   margin: 0 auto 1rem auto;
+}
+#extension-header p {
+  margin: 0 1rem;
 }
 
 .card-wrapper {
@@ -493,4 +514,55 @@ body {
 .browser-info img {
   margin: 0;
   width: 100%;
+}
+
+#accordion-container {
+  margin: 2rem 1rem;
+}
+#accordion-container button {
+  margin: auto;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.content-visible {
+  text-align: start;
+  line-height: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 0;
+  max-height: 300px;
+  transition: max-height 0.4s;
+}
+
+.content-hidden {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.accordion-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: none;
+  border-top: 1px solid hsl(0deg, 0%, 33%);
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  padding: 1rem 0;
+  max-height: 500px;
+}
+
+.accordion-icon {
+  transform: rotate(0deg);
+  transition: transform 0.2s, stroke 0.2s;
+  stroke: #5267DF;
+}
+
+.open {
+  transform: rotate(180deg);
+  stroke: hsl(0deg, 94%, 66%);
+  transition: transform stroke 0.3s;
 }/*# sourceMappingURL=style.css.map */

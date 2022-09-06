@@ -4,6 +4,10 @@
 @use '../components/picture_background' as *;
 
 body{
+    margin: 0 auto;
+}
+
+.max-width-wrapper{
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -39,6 +43,8 @@ body{
     @media(min-width: 769px){
         flex: 1 1 0px;
         text-align: left;
+        max-width: 600px;
+
 
         p{
             text-align: start;
@@ -86,7 +92,7 @@ body{
 
 
 .feature-pic-background{
-    @include blueBackground(95%, 50px);
+    @include blueBackground(95%, 30px);
     left: 0;
     border-top-right-radius: 500px;
     border-bottom-right-radius: 500px;
@@ -304,15 +310,38 @@ body{
         padding: 1rem 1rem 1.5rem 1rem;
     }
 
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 300px;
+        background-color: transparent;
+        padding: 3px;
+        margin-bottom: 1rem;
+        height: 60px;
+
+    }
+
     input{
-         width: 80%;
+         height: 100%;
          max-width: 300px;
          height: 2rem;
-         border: none;
          border-radius: 5px;
          font-family: 'Rubik', sans-serif;
-         padding: .5rem 0 .5rem 1rem;
-         margin-bottom: 1rem;
+         padding-left: 1rem;
+
+         &:focus{
+            outline: none;
+         }
+    }
+
+    p{
+        align-self: flex-start;
+        font-size: 12px;
+        color: white;
+        text-align: start;
+        margin: 0;
     }
 
     button{
@@ -323,37 +352,27 @@ body{
     }
 }
 
+
+
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: hsl(229, 31%, 21%);
+    width: 100%;;
 
-    #footer-logo-links{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        img{
-            margin: 2rem 0;
-        }
-
-        a{
-            color: white;
-            margin-bottom: 2rem;
-        }
-    }
 
     #footer-social-media{
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+
+        @media(min-width: 769px){
+            margin: 0;
+        }
     }
-
-
-
 
     @media(min-width: 769px){
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         footer > a{
@@ -363,9 +382,43 @@ footer{
     }
 }
 
-#footer-social-media{
-    img:first-child{
+#footer-logo-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        margin: 2rem 0;
+    }
+
+    a{
+        color: white;
+        margin-bottom: 2rem;
+        @media(min-width: 769px){
+            margin-bottom: 0rem;
+            margin-left: 1rem;
+        }
+    }
+
+    @media(min-width: 769px){
+        flex-direction: row;
+
+        img{
+            margin: 1.5rem 0;
+        }
+
+    }
+}
+
+#footer-social-media > img{
+    cursor: pointer;
+    &:first-child{
         margin-right: 1.5rem;
+        
+    }
+
+    @media(min-width: 769px){
+        margin-right: 1rem;
     }
 }
 

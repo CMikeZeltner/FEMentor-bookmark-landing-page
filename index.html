@@ -49,6 +49,9 @@
     </div>
   </header>
 
+  <div class='max-width-wrapper'>
+  
+
   <div id='page-intro-wrapper'>
 
     <div class='pic-background-container'>
@@ -68,6 +71,8 @@
     </section>
 
   </div>
+
+
 
   <div id='features-heading'>
     <h2>Features</h2>
@@ -194,11 +199,18 @@
     <button>More Info</button>
   </section>
 
+
+    
+  </div>
+
   <section id='email-signup'>
     <span>35,000+ already joined</span>
     <h2>Stay up-to-date with what we're doing</h2>
-    <input type="text" placeholder='Enter your email address'>
-    <button>Contact Us</button>
+    <div id='input-container'>
+      <input type="email" placeholder='Enter your email address' id='email-input'>
+      <p id='email-error-message'> </p>
+    </div>
+    <button onclick='emailValidator()'>Contact Us</button>
 
   </section>
   

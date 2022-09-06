@@ -188,6 +188,7 @@ ul a {
   border: 3px solid white;
   border-radius: 5px;
   padding: 0.5rem 30%;
+  cursor: pointer;
 }
 @media (min-width: 481px) {
   #btn-login {
@@ -289,12 +290,10 @@ ul a {
 
 .top-pic-background {
   position: absolute;
-  top: 50px;
   right: 0;
   background-color: hsl(231deg, 69%, 60%);
   margin-left: auto;
-  max-width: 600px;
-  width: 80%;
+  width: 100%;
   height: 80%;
   border-top-left-radius: 500px;
   border-bottom-left-radius: 500px;
@@ -302,6 +301,10 @@ ul a {
 }
 
 body {
+  margin: 0 auto;
+}
+
+.max-width-wrapper {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -319,10 +322,10 @@ body {
 
 .top-pic-background {
   position: absolute;
-  top: 50px;
+  top: 30px;
   background-color: hsl(231deg, 69%, 60%);
-  max-width: 600px;
-  width: 80%;
+  width: 60%;
+  max-width: 60%;
   height: 80%;
   z-index: -2;
   right: 0;
@@ -342,6 +345,7 @@ body {
   #product-intro {
     flex: 1 1 0px;
     text-align: left;
+    max-width: 600px;
   }
   #product-intro p {
     text-align: start;
@@ -368,6 +372,7 @@ body {
   box-shadow: -1px 7px 5px -5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   min-width: 140px;
+  cursor: pointer;
 }
 #download-link-wrapper a:last-of-type {
   text-decoration: none;
@@ -381,6 +386,7 @@ body {
   box-shadow: -1px 7px 5px -5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   min-width: 140px;
+  cursor: pointer;
 }
 
 #button-content {
@@ -401,10 +407,10 @@ body {
 
 .feature-pic-background {
   position: absolute;
-  top: 50px;
+  top: 30px;
   background-color: hsl(231deg, 69%, 60%);
-  max-width: 600px;
-  width: 80%;
+  width: 60%;
+  max-width: 60%;
   height: 95%;
   z-index: -2;
   left: 0;
@@ -509,6 +515,7 @@ body {
   box-shadow: -1px 7px 5px -5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   min-width: 140px;
+  cursor: pointer;
   width: 80%;
   margin: 1rem auto;
 }
@@ -599,6 +606,7 @@ body {
   box-shadow: -1px 7px 5px -5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   min-width: 140px;
+  cursor: pointer;
   margin: 2rem auto 3rem auto;
   max-width: 2rem;
 }
@@ -618,15 +626,34 @@ body {
 #email-signup h2 {
   padding: 1rem 1rem 1.5rem 1rem;
 }
+#email-signup div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  background-color: transparent;
+  padding: 3px;
+  margin-bottom: 1rem;
+  height: 60px;
+}
 #email-signup input {
-  width: 80%;
+  height: 100%;
   max-width: 300px;
   height: 2rem;
-  border: none;
   border-radius: 5px;
   font-family: "Rubik", sans-serif;
-  padding: 0.5rem 0 0.5rem 1rem;
-  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+#email-signup input:focus {
+  outline: none;
+}
+#email-signup p {
+  align-self: flex-start;
+  font-size: 12px;
+  color: white;
+  text-align: start;
+  margin: 0;
 }
 #email-signup button {
   text-decoration: none;
@@ -640,6 +667,7 @@ body {
   box-shadow: -1px 7px 5px -5px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   min-width: 140px;
+  cursor: pointer;
   margin-bottom: 3rem;
   width: calc(80% + 1rem);
   max-width: calc(300px + 1rem);
@@ -650,26 +678,20 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: hsl(229deg, 31%, 21%);
-}
-footer #footer-logo-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer #footer-logo-links img {
-  margin: 2rem 0;
-}
-footer #footer-logo-links a {
-  color: white;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 footer #footer-social-media {
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 769px) {
+  footer #footer-social-media {
+    margin: 0;
+  }
 }
 @media (min-width: 769px) {
   footer {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   footer footer > a {
@@ -678,6 +700,41 @@ footer #footer-social-media {
   }
 }
 
-#footer-social-media img:first-child {
+#footer-logo-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer-logo-links img {
+  margin: 2rem 0;
+}
+#footer-logo-links a {
+  color: white;
+  margin-bottom: 2rem;
+}
+@media (min-width: 769px) {
+  #footer-logo-links a {
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 769px) {
+  #footer-logo-links {
+    flex-direction: row;
+  }
+  #footer-logo-links img {
+    margin: 1.5rem 0;
+  }
+}
+
+#footer-social-media > img {
+  cursor: pointer;
+}
+#footer-social-media > img:first-child {
   margin-right: 1.5rem;
+}
+@media (min-width: 769px) {
+  #footer-social-media > img {
+    margin-right: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

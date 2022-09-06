@@ -35,24 +35,23 @@
 
 .top-pic-background{
     position: absolute;
-    top: 50px;
     right: 0;
     background-color: hsl(231, 69%, 60%);
     margin-left: auto;
-    max-width: 600px;
-    width: 80%;
+    
+    width: 100%;
     height: 80%;
     border-top-left-radius: 500px;
     border-bottom-left-radius: 500px;
     z-index: -2;
 }
 
-@mixin blueBackground($height: 80%, $top: 50px){
+@mixin blueBackground($height: 80%, $top: 30px){
     position: absolute;
     top: $top;
     background-color: hsl(231, 69%, 60%);
-    max-width: 600px;
-    width: 80%;
+    width: 60%;
+    max-width: 60%;
     height: $height;
 
     z-index: -2;

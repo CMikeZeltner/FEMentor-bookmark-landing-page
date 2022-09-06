@@ -4,6 +4,7 @@
     border: 3px solid white;
     border-radius: 5px;
     padding: .5rem 30%;
+    cursor: pointer;
     @media(min-width: 481px){
         border: none;
         padding: 12.5px 1.2rem;
@@ -26,4 +27,5 @@
     box-shadow: -1px 7px 5px -5px rgba(0,0,0,0.2);
     font-size: 14px;
     min-width: 140px;
+    cursor: pointer;
 }

@@ -82,3 +82,40 @@ const toggleMobileMenu = function(){
     icon[num].classList.toggle('open');
 
   }
+
+
+  const emailValidator = function(){
+    const emailInput = document.querySelector('input');
+    const value = emailInput.value;
+
+    let validEmail = validateEmail(value);
+    displayEmailResult(validEmail);
+
+  }
+
+  const validateEmail = function(email) {
+      let re = /\S+@\S+\.\S+/;
+      return re.test(email);
+  }
+
+  const displayEmailResult = function(bool){
+    const pTag = document.getElementById('email-error-message');
+    const emailInput = document.querySelector('input');
+    const inputDiv = document.getElementById('input-container');
+    if(bool){
+      pTag.innerHTML = 'Success!'
+      inputDiv.style.backgroundColor = '#77dd77';
+    } else {
+      inputDiv.style.backgroundColor = 'hsl(0, 94%, 66%)';
+      pTag.innerHTML = "Whoops, make sure it's an email.";
+    }
+
+    setTimeout(() => {
+      inputDiv.style.backgroundColor = 'transparent';
+      pTag.innerHTML = '';
+    }, 3000);
+  }
+
+
+  
+

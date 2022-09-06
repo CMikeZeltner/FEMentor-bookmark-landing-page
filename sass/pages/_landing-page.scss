@@ -116,14 +116,17 @@ body{
 
 .feature-text{
     flex: 1 1 0px;
+    text-align: center;
     p{
-        margin: 0 1rem;
+        margin: 0 auto;
     }
     @media(min-width: 769px){
         padding: 2rem;
         max-width: 50ch;
         p, h2{
             text-align: start;
+            margin: 1rem 0;
+            padding: 0;
         }
     }
 }
@@ -262,6 +265,7 @@ body{
     transform: rotate(0deg);
     transition: transform .2s, stroke .2s ;
     stroke: #5267DF;
+    z-index: -1;
     
 }
 
@@ -271,6 +275,98 @@ body{
     transition: transform stroke .3s;
 }
 
+#faq-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    button:last-child{
+        @include mobileButton();
+        margin: 2rem auto 3rem auto;
+        max-width: 2rem;
+    }
+}
 
+
+#email-signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #5267DF;
+
+    span{
+        letter-spacing: .3ch;
+        color: white;
+        padding: 3rem 0rem 1rem;
+    }
+
+    h2{
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+
+    input{
+         width: 80%;
+         max-width: 300px;
+         height: 2rem;
+         border: none;
+         border-radius: 5px;
+         font-family: 'Rubik', sans-serif;
+         padding: .5rem 0 .5rem 1rem;
+         margin-bottom: 1rem;
+    }
+
+    button{
+        @include mobileButton(hsl(0, 94%, 66%));
+        margin-bottom: 3rem;
+        width: calc(80% + 1rem);
+        max-width: calc(300px + 1rem);
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(229, 31%, 21%);
+
+    #footer-logo-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            margin: 2rem 0;
+        }
+
+        a{
+            color: white;
+            margin-bottom: 2rem;
+        }
+    }
+
+    #footer-social-media{
+        padding-bottom: 2rem;
+    }
+
+
+
+
+    @media(min-width: 769px){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        footer > a{
+            margin: 0;
+            background-color: pink;
+        }
+    }
+}
+
+#footer-social-media{
+    img:first-child{
+        margin-right: 1.5rem;
+    }
+}
 
 

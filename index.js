@@ -43,7 +43,6 @@ const toggleMobileMenu = function(){
 
   const featureSelectedToggler = function(numTab){
       const tabs = document.querySelectorAll('.button-wrapper');
-      console.log(tabs);
       
       tabs.forEach((tab) => {
           tab.classList.remove('selected');
